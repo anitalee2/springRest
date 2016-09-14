@@ -16,6 +16,9 @@
             <li ng-class="{ active:tab.isSet(3) }">
               <a href ng-click="tab.setTab(3)">Reviews</a>
             </li>
+            <li ng-class="{ active:tab.isSet(4) }">
+              <a href ng-click="tab.setTab(4)">Orders</a>
+            </li>
           </ul>
           <!--  Description Tab's Content  -->
           <div ng-show="tab.isSet(1)" ng-include="'product-description.html'"></div>
@@ -26,6 +29,11 @@
 
           <!--  Review Tab's Content  -->
 			<product-reviews ng-show="tab.isSet(3)"></product-reviews>
+
+
+          <!--  Order Details Tab's Content  -->
+          <div product-orderDetails ng-show="tab.isSet(4)"ng-include="'product-orderDetails.html'"></div>
+
            </section>
 </body>
 </html>
